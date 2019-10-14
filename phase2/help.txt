@@ -1,0 +1,8 @@
+Hello!
+
+To build, run and generate javaDoc the project:
+./buildRunJavaDoc.sh
+make sure to run the script in the project folder (group_0508/phase1/)
+this should build the project and start the GUI.
+
+Cheers!

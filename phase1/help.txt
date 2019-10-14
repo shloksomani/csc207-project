@@ -1,0 +1,14 @@
+Hello!
+
+To build, run and generate javaDoc the project:
+./buildRunJavaDoc.sh
+make sure to run the script in the project folder (group_0508/phase1/)
+this should build the project and start the GUI.
+
+if you don't want to use the bash script:
+1. create a directory to compile the project to
+2. run the command: javac -d <Directory to Compile to>  ./src/*/*.java
+replacing the text between the <> with the path to the wanted compile directory.
+3. run the command: java -cp <Directory to Compile to> viewer.Viewerto start the project.
+
+Cheers!

@@ -1,0 +1,66 @@
+-Create a Tag class
+-Create a TagManager class
+-Create a log class
+-Create a Manager class
+-Create a Image class extends absFile
+-Create a ImageManager class
+
+-Create Directory Package
+    -Create a File class
+        -Should be able to change the name of a file
+    -Create a Folder class that extends File
+        -Should store a representation of everything inside the Folder.
+        -Should be able to get the representation of items in the Folder.
+    -Create a File Manager
+        -Should be able to create an instance of File Manager with a given root directory
+        -Should store a representation of of the root and everything inside the folder
+        -Should be able to get all files that match the given input
+
+
+Nov 9th
+-Create ImageManager, TagManager class in image_tag_explorer
+-Create Folder class
+
+-ImageManager
+	-Should be able to add Image objects to the list
+	-Should be able to remove Image objects to the list
+	-Should be able to get all the Images from this Manager
+-TagManager
+	-Should be able to add Tag objects to the list
+	-Should be able to remove Tag objects to the list
+	-Should be able to get all the Tags from this Manager
+
+--Just some notes I wrote up from the phase 1 introduction.
+What should the program do?
+-rename image files based on a set of tags the user chooses.
+
+What can the user see?
+-A list of all images files anywhere in the directory
+-A list of all image files directly under the directory
+-all the names that a file as had
+-view an image
+-older sets of tags for a particular file
+
+What should a user be able to do?
+-user should be able to go back to older sets of tags for a particular file
+-user should be able to move a file to another directory
+-user should be able to select tags from the currently-existing tags
+-User should be able to add new tags and delete existing ones
+
+What should be stateless?
+-A list of available tags
+
+What should be logged?
+-All renaming ever done (old name, new name, and timestamp)
+
+===Friday, November 17, 2017===
+Some things that still need to get done for the model:
+     -ImageFile should be able to return a image of it's associated image file.
+     -ImageFileManager should be able to change directories. --Done (Elliot Ford)
+Some things that need to be done in general:
+     -Create a UML diagram (design.pdf)
+     -Create a file with contain a concise and clear set of instructions for how to compile and run your code from the
+      command line (help.txt)
+     -Create a file where each group member should describe what they contributed to phase 1 in 100 words or less.
+      (duties.txt)
+===============================

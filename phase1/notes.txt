@@ -1,0 +1,30 @@
+#########
+# Step 1
+
+Code affected: none
+
+Created this file to keep track of 
+changes made in phase1
+
+#########
+# Step 2
+
+Code affected: FileManager.java, Image.java, Tag.java
+
+Created these three java files and finished basic set up with FileManager.java in the file_explorer package and Image.java and Tag.java in the image_tag_explorer.
+
+FileManager.java -> FileManager(String root), FileManager(File root)
+		    getAllLeafs
+		    getFiles
+		    getDirectoryLeafs
+		    
+Image.java —> Image(File imageFile), Image(File imageFile, Tag[] tags)
+	      addTag
+	      removeTag
+	      rename
+	      getName
+
+Tag.java -> Tag(String name), Tag(String name, Image[] images)
+	    addImage
+	    removeImage
+	    getName

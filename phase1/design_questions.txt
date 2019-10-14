@@ -1,0 +1,13 @@
+# Phase 1 Design Questions
+
+Which part(s) of the program are responsible for reading the contents of the
+starting directory?
+The FileManager is responsible for getting files from the starting directory
+
+What happens when a new tag is created?
+ModelManager creates the new tag passing in the associated images passes it to
+TagManager to hang on to it.
+
+Which class is keeping track of the association between tags and files?
+Image keeps track of associated tags and Tag keeps track of associated Images.
+

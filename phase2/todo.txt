@@ -1,0 +1,61 @@
+=====November 22, 2017=====
+-----Some things to fix-----
+-We don't need to check if a set contains a String (I looked into this and not sure how we were having  (Shadman)
+ this problem in the first place)
+-the way we're updating the views probably isn't necessary,                                             (Elliot)
+ we should try creating a bunch of class level observable lists and see if changing them with the
+ program is automatically reflected in the views.
+-if you make a selection in treeView that isn't an item on the list it returns null which crashes the   (Shlok)
+ program.
+-You should be able to move through the items in the tree view and it should update the image editor.   (Shlok)
+-If you erase a tag it doesn't update the display correctly.                                            (All)
+
+-----Some things to improve-----
+-Currently implementing the Observer, Observable design between TagManager (Observer) and               (Jeremy)
+ ImageFile (Observable) for when ImageFile has a tag added to it. We should implement the same design
+ (With TagManager as the Observable and ImageFile as the Observer) for when a tag is deleted from
+ TagManager.
+-We should maintain a global list of tags, this can be accomplished with tagManager having it's own     (Jeremy)
+ corresponding log file.
+-A lot of the log file stuff could be used with tagManager for the above bullet, we should try breaking (Jeremy)
+ out the log code in ImageFile and create a Log class that manages log files.
+-Allow switching between items in the TreeView using arrowKeys                                          (Shlok)
+-Allow drag & drop to move images around (not sure how this works considering that there's no tree view)
+-we should display the absolute path of a file
+
+-----Some features to potentially add-----
+-look into adding support for moving photos to facebook/instagram/ssh                                   (All)
+-support more than just imageFiles                                                                      (All)
+-add the ability to ImageFile to modify *just* the original name of a file                              (Shadman)
+-a graph (probably a pie chart) that shows the percentages of the tags used in a folder                 (Elliot)
+
+
+-----Some things to create-----
+-unit test for at least 2 classes (ImageFile and ImageFileManager would be a good two to do)            (Elliot)
+
+There's probably more things to do, but this is a good start
+
+
+------Just something-------
+- update log for TagManager
+- getGlobalTags
+===========================
+=====November 25, 2017=====
+-----Things completed-----
+-We don't need to check if a set contains a String (I looked into this and not sure how we were having  (Shadman)
+ this problem in the first place)
+-if you make a selection in treeView that isn't an item on the list it returns null which crashes the   (Shlok)
+ program.
+-Currently implementing the Observer, Observable design between TagManager (Observer) and               (Jeremy)
+ ImageFile (Observable) for when ImageFile has a tag added to it. We should implement the same design
+ (With TagManager as the Observable and ImageFile as the Observer) for when a tag is deleted from
+ TagManager.
+-----Some things to fix-----
+-the way we're updating the views probably isn't necessary,                                             (Elliot)
+ we should try creating a bunch of class level observable lists and see if changing them with the
+ program is automatically reflected in the views. (this is currently being worked on)
+ =====November 29, 2017=====
+ -----Things completed-----
+ -Created a Log class for all persistent logging.
+ -Created an interface Taggable to represent all classes that can be tagged.
+ -Created an abstract class AbsTaggableFile to represent all

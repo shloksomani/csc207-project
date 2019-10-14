@@ -1,0 +1,18 @@
+-Shlok
+It was great working on this assignment with my group. Everyone did their best to contribute to the project and did
+a great job finishing their assigned duties. I was handling the front end bits and pieces of back end as well. In
+building the gui Elliot and Jeremy helped me, guided me and did a great job explaining the back end which helped in merging the
+back end with front fairly simple.
+
+-Elliot
+I was in charge of structuring the model, and implementing it with Jeremy. I wrote the original code for
+FileManager, which when the project was restructured most of it was moved to ImageFileManager. After model was for the
+most part done, I helped Shlok work on the viewer and controller and helped figure out lambda errors until we made the
+switch to using jfxl viewer controller structure. I also worked on the layout of the Viewer and helped debug the model.
+
+-Jeremy
+My job in this group initially was to work on the back end. Along with my teammate Elliot, we finished the model package,
+which contains ImageFile.java, ImageFileManager.java and Tag.Manager.java. We made sure that everything works in a dynamic
+fashion rather than simply storing lists of everything. Later into the project, after finishing the back end, we then joined
+our teammate Shlok to work on the GUI, which is in the viewer package, containing the Viewer.java and the ViewerController.java.
+I was mainly focusing on methods interacting with the backend and the handle methods.

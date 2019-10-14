@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns:fx="http://javafx.com/fxml/1" fx:id="gp" maxHeight="1.7976931348623157E308"
+          maxWidth="1.7976931348623157E308"
+          minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="799.0"
+          xmlns="http://javafx.com/javafx/8.0.121" fx:controller="viewer.ViewerController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.0" minWidth="10.0" prefWidth="238.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="561.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <VBox maxHeight="1.7976931348623157E308" GridPane.vgrow="ALWAYS">
+        <TreeView fx:id="viewer" maxHeight="1.7976931348623157E308" onMouseClicked="#handleViewerClick"/>
+        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <Button mnemonicParsing="false" onAction="#handleToggleViewerAction" prefHeight="25.0"
+                    prefWidth="100.0" text="Toggle View"/>
+            <Button mnemonicParsing="false" onAction="#handleChangeDir" text="Change Dir"
+                    textAlignment="CENTER"/>
+        </HBox>
+    </VBox>
+    <GridPane fx:id="gp2" hgap="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="5.0"
+              GridPane.columnIndex="1">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0"
+                               prefWidth="200.0"/>
+            <ColumnConstraints/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="261.0"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="239.5" minHeight="103.0" prefHeight="104.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="169.0" minHeight="10.0" prefHeight="111.0" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="48.0" minHeight="7.33331298828125" prefHeight="42.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <padding>
+            <Insets left="10.0" right="10.0" top="10.0"/>
+        </padding>
+        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0"
+              GridPane.columnSpan="2">
+            <GridPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </GridPane.margin>
+            <ImageView fx:id="imageView" fitHeight="239.0" fitWidth="347.0" pickOnBounds="true"
+                       preserveRatio="true">
+                <viewport>
+                    <Rectangle2D/>
+                </viewport>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                <padding>
+                    <Insets left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <Label fx:id="imageName" alignment="CENTER" text="No Image"/>
+                <Button fx:id="move" mnemonicParsing="false" onAction="#handleMoveFile" text="Move"/>
+            </HBox>
+        </VBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="1">
+            <VBox alignment="CENTER">
+                <Label text="All Tags"/>
+                <ListView fx:id="allTags" maxHeight="1.7976931348623157E308"
+                          maxWidth="1.7976931348623157E308"/>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <Button fx:id="addTag" mnemonicParsing="false" onAction="#handleAddTag"
+                            text="Add"/>
+                    <Button fx:id="deleteTag" mnemonicParsing="false" onAction="#handleDeleteTag"
+                            text="Erase"/>
+                    <padding>
+                        <Insets left="10.0" right="10.0"/>
+                    </padding>
+                </HBox>
+            </VBox>
+            <VBox alignment="CENTER">
+                <Label contentDisplay="TOP" text="Current Tags"/>
+                <ListView fx:id="currentTags" maxHeight="1.7976931348623157E308"
+                          maxWidth="1.7976931348623157E308"/>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <Button fx:id="removeTag" mnemonicParsing="false" onAction="#handleRemoveTag"
+                            text="Remove Tag"/>
+                </HBox>
+            </VBox>
+            <VBox alignment="CENTER">
+                <Label alignment="CENTER" text="Previous Tags"/>
+                <ListView fx:id="previousTags" maxHeight="1.7976931348623157E308"
+                          maxWidth="1.7976931348623157E308"/>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                    <Button mnemonicParsing="false" onAction="#handleRestoreTag"
+                            text="Restore Tag"/>
+                </HBox>
+            </VBox>
+        </HBox>
+        <HBox prefHeight="53.0" prefWidth="462.0" spacing="10.0" GridPane.columnSpan="2147483647"
+              GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+            </padding>
+            <TextField fx:id="tagToCreate" HBox.hgrow="ALWAYS"/>
+            <Button mnemonicParsing="false" onAction="#handleCreateTag" text="Create Tag"/>
+        </HBox>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+            <Label text="Log"/>
+            <ListView fx:id="log" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"/>
+        </VBox>
+    </GridPane>
+</GridPane>
